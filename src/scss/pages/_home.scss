@@ -1,0 +1,18 @@
+.heroTitle {
+    padding: 4rem 0;
+}
+
+.heroDesc {
+    margin: 0 auto 6rem auto;
+    width: 32rem;
+}
+
+.indexCards {
+    padding: 0 12%;
+    margin-bottom: 10rem;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 6rem 3rem;
+    justify-content: center;
+    align-items: flex-start;
+}

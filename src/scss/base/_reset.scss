@@ -1,0 +1,68 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+//Disable animations in less-animations mode
+@media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+    }
+}
+
+//Margins & padding
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+//Smooth scrolling (for anchors and id's)
+html {
+    scroll-behavior: smooth;
+    //And bg main color
+    // background-color: map-get(variables.$palette, "bg-main");
+}
+//Anchors. To behave like inline blocks
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+//Responsive images
+img , picture , video , iframe , figure {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        
+    object-position: center center;
+}
+
+//List styles
+ul {
+    list-style: none;
+    li {
+        list-style-type: none;
+    }
+}
+
+//Custom selection colors
+// ::selection {
+//     background-color: map-get(variables.$palette, "text-accent");
+//     color: map-get(variables.$palette, "bg-main");
+// }
+
+//Forms reset
+form, textarea, select , button{
+    font-family: inherit;
+    font-size: inherit;
+    hyphens: auto;
+    background-color: transparent;
+    color:inherit;
+    display: block;
+    /* opcional */ appearance: none;
+}

@@ -1,0 +1,15 @@
+@use '../abstracts/variables';
+
+.nav > ul{
+    display: flex;
+    flex-flow: row nowrap;
+    li a {
+        padding: .3rem 2rem;
+        cursor: pointer;
+        margin-bottom: .2rem;
+        &:hover {
+            color: map-get(variables.$palette, "acc-1");
+            transition: all .2s ease;
+        }
+    }
+}

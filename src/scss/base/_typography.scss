@@ -1,0 +1,54 @@
+@use '../abstracts/variables';
+
+.nav {
+    font-family: map-get(variables.$font, "text");
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    word-spacing: .2rem;
+}
+
+.heroTitle {
+    font-family: map-get(variables.$font, "subtitle");
+    text-align: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+}
+
+.heroDesc {
+    text-align: center;
+    font-family: map-get(variables.$font, "title");
+    font-size: 1rem;
+    font-weight: 400;
+    word-spacing: .1rem;
+    color: map-get(variables.$palette, "text-2");
+    line-height: 2rem;
+    letter-spacing: .01rem;
+}
+
+.card__text--type {
+    text-transform: uppercase;
+    font-size: .8rem;
+    letter-spacing: .1rem;
+    font-family: map-get(variables.$font, "text");
+    color: map-get(variables.$palette, "card-category");
+}
+
+.card__text--title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    word-spacing: .04rem;
+    line-height: 25px;
+    text-transform: capitalize;
+    font-family: map-get(variables.$font, "title");
+    color: map-get(variables.$palette, "card-text");
+}
+
+.card__text--price {
+    @extend .card__text--title;
+    color: map-get(variables.$palette, "card-price");
+    font-weight: 400;
+}
