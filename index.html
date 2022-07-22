@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/cart.css">
     <title>Spring Instrumentos | Inicio</title>
 </head>
 <body>
@@ -33,65 +34,42 @@
         </div>
     </header>
     <main>
-        <section class="hero">
-
-        </section>
         <h1 class="heroTitle">Novedades en el Bunker!</h1>
         <h3 class="heroDesc">Descubrí las últimas novedades de Spring. Guitarras, bajos, amplificadores, pedales y múcho más.</h3>
         <section class="indexCards">
             <div class="card">
-                <a class="card__img" href="#"><img src="src/img/guitars/1957-gibson-lp-yellow/hero.jpg" alt="Gibson Les Paul Special 1957 Tv. Yellow"></a>
+                <a class="card__img" href="#"><img src="" alt="..."></a>
                 <div class="card__text">
-                    <a class="card__text--type" href="#">Guitarras eléctricas</a>
-                    <h3 class="card__text--title"><a href="#">Gibson Les Paul Special 1957 Tv. Yellow</a></h3>
-                    <p class="card__text--price">U$s 24,990.00</p>
+                    <a class="card__text--type" href="#">Type</a>
+                    <h3 class="card__text--title"><a href="#">Model</a></h3>
+                    <p class="card__text--price">U$S 00.000,00</p>
                 </div>
+                <input class="card__btn" type="button" value="Agregar al carrito" />
             </div>
-            <div class="card">
-                <a class="card__img" href="#"><img src="src/img/guitars/1996-fender-strato-sand/hero.jpg" alt="Fender Stratocaster 1957 Cunetto Relic Desert Sand 1996"></a>
-                <div class="card__text">
-                    <a class="card__text--type" href="#">Guitarras eléctricas</a>
-                    <h3 class="card__text--title"><a href="">Fender Stratocaster 1957 Cunetto Relic Desert Sand 1996</a></h3>
-                    <p class="card__text--price">U$s 5,990.00</p>
+        </section>
+        <div class="cart--show"></div>
+        <div class="cart--badge"></div>
+        <section class="cart">
+            <!-- <div class="cart__article">
+                <img class="cart__article--img" src="src/img/guitars/1964-gibson-sg-cherry/hero.jpg" alt="">
+                <div class="cart__article--div"></div>
+                <div class="cart__article--opt">
+                    <div class="article__name">Gibson SG Standard 1964 Cherry Red (C/Vibrola Lyre)</div>
+                    <div class="article__price">U$S 7.990,00</div>
                 </div>
+                <div class="cart__article--remove">T</div>
+            </div> -->
+            <div class="cart__btns">
+                <div class="cart__btns--empty">Empty</div>
+                <div class="cart__btns--buy">Buy</div>
             </div>
-            <div class="card">
-                <a class="card__img" href="#"><img src="src/img/guitars/1964-gibson-sg-cherry/hero.jpg" alt="Gibson SG Standard 1964 C/Vibrola Lyre"></a>
-                <div class="card__text">
-                    <a class="card__text--type" href="#">Guitarras eléctricas</a>
-                    <h3 class="card__text--title"><a href="">Gibson SG Standard 1964 C/Vibrola Lyre</a></h3>
-                    <p class="card__text--price">U$s 6,350.00</p>
-                </div>
-            </div>
-            <div class="card">
-                <a class="card__img" href="#"><img src="src/img/guitars/1962-gibson-lpcsg-white/hero.jpg" alt="Gibson Les Paul Custom SG 1962 Polaris White Refin"></a>
-                <div class="card__text">
-                    <a class="card__text--type" href="#">Guitarras eléctricas</a>
-                    <h3 class="card__text--title"><a href="">Gibson Les Paul Custom "SG" 1962 Polaris White Refin</a></h3>
-                    <p class="card__text--price">U$s 10,590.00</p>
-                </div>
-            </div>
-            <div class="card">
-                <a class="card__img" href="#"><img src="src/img/bass/1968-fender-jazz-sunburst/hero.jpg" alt="Fender Jazzbass 1968 Sunburst"></a>
-                <div class="card__text">
-                    <a class="card__text--type" href="#">Bajos</a>
-                    <h3 class="card__text--title"><a href="">Fender Jazzbass 1968 Sunburst</a></h3>
-                    <p class="card__text--price">U$s 13,990.00</p>
-                </div>
-            </div>
-            <div class="card">
-                <a class="card__img" href="#"><img src="src/img/guitars/1995-mosrite-ventures-black/hero.jpg" alt="Mosrite Ventures Model 65 Reissue Japan 1995"></a>
-                <div class="card__text">
-                    <a class="card__text--type" href="#">Guitarras eléctricas</a>
-                    <h3 class="card__text--title"><a href="">Mosrite Ventures Model '65 Reissue Japan 1995</a></h3>
-                    <p class="card__text--price">U$s 3,150.00</p>
-                </div>
-            </div>
+            <div class="cart__total">Total: U$S 23.970,00</div>
         </section>
     </main>
     <footer>
 
     </footer>
+    <script src="src/js/db.js"></script>
     <script src="src/js/main.js"></script>
 </body>
 </html>

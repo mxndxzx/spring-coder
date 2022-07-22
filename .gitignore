@@ -5,3 +5,6 @@ package-lock.json
 
 # Css maps
 *.css.map
+
+# VSC Workspace
+*.code-workspace
