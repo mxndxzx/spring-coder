@@ -9,7 +9,7 @@
     word-spacing: .2rem;
 }
 
-.heroTitle {
+.indexTitle {
     font-family: map-get(variables.$font, "subtitle");
     text-align: center;
     font-weight: 600;
@@ -18,14 +18,14 @@
     letter-spacing: .1rem;
 }
 
-.heroDesc {
+.indexDesc {
     text-align: center;
     font-family: map-get(variables.$font, "title");
     font-size: 1rem;
     font-weight: 400;
     word-spacing: .1rem;
     color: map-get(variables.$palette, "text-2");
-    line-height: 2rem;
+    line-height: 1.5rem;
     letter-spacing: .01rem;
 }
 

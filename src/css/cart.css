@@ -1,4 +1,4 @@
-.cart--show {
+/* .cart--show {
     width: 32px;
     height: 32px;
     background-color: black;
@@ -31,7 +31,6 @@
     align-items: flex-start;
     background-color: white;
     padding: 0 1rem;
-    /* display: none; */
 }
 
 .cart__article {
@@ -88,4 +87,4 @@
     transition: .1s all;
     color: goldenrod;
     border: 1px solid goldenrod;
-}
+} */

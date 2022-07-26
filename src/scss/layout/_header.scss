@@ -2,12 +2,15 @@
 
 header {
     padding: 2rem 8%;
+    position: absolute;
+    width: 100%;
     background-color: map-get(variables.$palette, "head-bg");
     color: map-get(variables.$palette, "head-text");
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    display: none;
 }
 
 .logo {

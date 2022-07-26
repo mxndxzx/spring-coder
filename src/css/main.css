@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap");
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
@@ -65,7 +66,7 @@ form, textarea, select, button {
   word-spacing: 0.2rem;
 }
 
-.heroTitle {
+.indexTitle {
   font-family: "Ibarra Real Nova";
   text-align: center;
   font-weight: 600;
@@ -74,14 +75,14 @@ form, textarea, select, button {
   letter-spacing: 0.1rem;
 }
 
-.heroDesc {
+.indexDesc {
   text-align: center;
   font-family: "Gelasio";
   font-size: 1rem;
   font-weight: 400;
   word-spacing: 0.1rem;
   color: #838383;
-  line-height: 2rem;
+  line-height: 1.5rem;
   letter-spacing: 0.01rem;
 }
 
@@ -115,7 +116,7 @@ form, textarea, select, button {
   font-family: "Gelasio";
   font-weight: 500;
   align-self: flex-start;
-  font-size: 0.9rem;
+  font-size: 100%;
   padding: 0.8rem 1rem;
   cursor: pointer;
 }
@@ -129,18 +130,53 @@ form, textarea, select, button {
   width: 20%;
   display: flex;
   flex-flow: column nowrap;
-  row-gap: 0.8rem;
+  row-gap: 1rem;
   min-width: 450px;
+}
+
+.card__text--title > a, .card__text--price > a {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: baseline;
+}
+
+.cross {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: 50%;
+}
+
+.cross::before, .cross::after {
+  position: absolute;
+  content: " ";
+  top: -40%;
+  height: 23px;
+  width: 1px;
+  background-color: #333;
+}
+
+.cross::before {
+  transform: rotate(45deg);
+}
+
+.cross::after {
+  transform: rotate(-45deg);
 }
 
 header {
   padding: 2rem 8%;
+  position: absolute;
+  width: 100%;
   background-color: #191919;
   color: #CCC;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
+  display: none;
 }
 
 .logo {
@@ -243,13 +279,63 @@ header {
   transition: all 0.2s ease;
 }
 
-.heroTitle {
-  padding: 4rem 0;
+.indexHero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+.indexHero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/walls/index-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(40%);
 }
 
-.heroDesc {
-  margin: 0 auto 6rem auto;
-  width: 32rem;
+.indexHero__logo {
+  z-index: 10;
+  height: 18%;
+  width: auto;
+}
+
+.indexHero__btn {
+  z-index: 10;
+  margin-top: 10rem;
+  padding: 0.8rem 1.2rem;
+  background-color: transparent;
+  border-radius: 2px;
+  border: 3px solid #CAA153;
+  color: #CAA153;
+  font-family: "Gelasio";
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: 0.1s all;
+}
+.indexHero__btn:hover {
+  transition: 0.1s all;
+  border: 3px solid #D2AF6D;
+  color: #D2AF6D;
+  transform: scale(0.98);
+}
+
+.indexTitle {
+  padding-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.indexDesc {
+  margin: 2.8rem auto 6rem auto;
+  width: 20%;
 }
 
 .indexCards {

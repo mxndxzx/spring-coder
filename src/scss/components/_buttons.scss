@@ -7,7 +7,7 @@
     font-family: map-get(variables.$font, "title");
     font-weight: 500;
     align-self: flex-start;
-    font-size: .9rem;
+    font-size: 100%;
     padding: .8rem 1rem;
     cursor: pointer;
     &:hover {

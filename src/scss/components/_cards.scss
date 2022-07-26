@@ -2,6 +2,17 @@
     width: 20%;
     display: flex;
     flex-flow: column nowrap;
-    row-gap: .8rem;
+    row-gap: 1rem;
     min-width: 450px;
+}
+
+.card__text--title {
+    // height: 30px;
+    & > a {
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: baseline;
+    }
 }

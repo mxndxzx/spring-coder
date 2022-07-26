@@ -1,15 +1,12 @@
 // DATABASE: This file has all the products shown within the shop
 class instrument {
-    constructor (id,title,color,year,reissue,serial,priceStr,price,img) {
+    constructor (id,title,price,total,img,quant,) {
         this.id = id;
         this.title = title;
-        this.color = color;
-        this.year = year;
-        this.reissue = reissue;
-        this.serial = serial;
-        this.priceStr = priceStr;
         this.price = price;
+        this.total = total;
         this.img = img;
+        this.quant = quant;
     };
 };
 
@@ -31,7 +28,7 @@ class instrument {
 
 // Product catalogue
 const products = [
-    new instrument (1,"Fender Telecaster Custom Shop", "Olympic White","1967"," ","113228","19.990,00",19990,"src/img/guitars/1967-fender-tele-white/hero.jpg"),
-    new instrument (2,"Gibson Les Paul Special", "Tv. Yellow","1957"," ","18934","23.590,00",23590,"src/img/guitars/1957-gibson-lp-yellow/hero.jpg"),
-    new instrument (3,"Fender Stratocaster", "Desert Sand","1996","1957 Cunetto Relic","192836","5.990,00",5990,"src/img/guitars/1996-fender-strato-sand/hero.jpg"),
+    new instrument (1,"Fender Telecaster Custom Shop 1967 Olympic White",19990,19990,"src/img/guitars/1967-fender-tele-white/hero.jpg",1),
+    new instrument (2,"Gibson Les Paul Special 1957 Tv. Yellow",23590,23590,"src/img/guitars/1957-gibson-lp-yellow/hero.jpg",1),
+    new instrument (3,"Fender Stratocaster 1957 Cunetto Relic Desert Sand 1996",5990,5990,"src/img/guitars/1996-fender-strato-sand/hero.jpg",1),
 ];
