@@ -1,5 +1,6 @@
 // DOM Selectors
 const cards = document.querySelector('.indexCards');
+const cartToggler = document.querySelector('.cart--toggle');
 const cartItems = document.querySelector('.cart');
 const evAddToCart = document.querySelectorAll('.card__btn');
 const remItem = document.querySelectorAll('.cart__article--remove');
@@ -15,7 +16,7 @@ const priceMask = (element) => {
 }
 
 const cardShow = (product) => {
-    cards.innerHTML = "";
+    cards.innerHTML = '';
     product.forEach(element => {
         cards.innerHTML += `
             <div class="card">
@@ -47,20 +48,28 @@ const addToCart = (itemId) => {
 };
 
 const showProducts = () => {
-    let cart2 = getStorage();
-    cartItems.innerHTML = "";
-    cart2.forEach(element => {
+    let cart = getStorage();
+    cartItems.innerHTML = '';
+    cart.forEach(element => {
         cartItems.innerHTML += `
-            <div class="cart__article">
-                <img class="cart__article--img" src="${element.img}" alt="">
-                <div class="cart__article--div"></div>
-                <div class="cart__article--opt">
-                    <div class="article__name">${element.title}</div>
-                    <div class="article__price">${priceMask(element.total)}</div>
-                    <div class="article__quant">${(element.quant)} Item</div>
+            <div id="artId-${element.id}">
+                <div class="cart__article">
+                    <img class="cart__article--img" src="${element.img}" alt="">
+                    <div class="cart__article--div"></div>
+                    <div class="cart__article--opt">
+                        <div class="article__name">${element.title}</div>
+                        <div class="article__price">${priceMask(element.total)}</div>
+                        <div class="article__quant">${(element.quant)} Item</div>
+                    </div>
+                    <div onclick="removeItem(${element.id})" class="cart__article--remove">X</div>
                 </div>
-                <div onclick="removeItem(${element.id})" class="cart__article--remove">X</div>
             </div>`;
+        // Remove item visually
+        const artId = document.querySelector('#artId-' + element.id);
+        const prodIndex = cart.findIndex(e => e.id == element.id);
+        if (cart[prodIndex].quant == 0) {
+            artId.innerHTML = ' ';
+        } 
     });
 };
 
@@ -77,6 +86,26 @@ const isInCart = (cartId) => {
     let cart = getStorage();
     return cart.some(e => e.id == cartId);
 };
+
+const removeItem = (remId) => {
+    let cart = getStorage();
+    const prodIndex = cart.findIndex(e => e.id == remId);
+    cart[prodIndex].quant--;
+    cart[prodIndex].total = cart[prodIndex].quant * cart[prodIndex].price;
+    if (cart[prodIndex].quant == 0) {
+        localStorage.removeItem(cart[prodIndex]);
+    };
+    saveStorage(cart);
+    showProducts();
+};
+
+const cartShow = () => {
+    cartItems.classList.toggle('cart--show');
+};
+
+
+// Event Listeners
+cartToggler.addEventListener("click", cartShow)
 
 cardShow(products);
 showProducts();
