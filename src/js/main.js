@@ -67,9 +67,7 @@ const showProducts = () => {
         // Remove item visually
         const artId = document.querySelector('#artId-' + element.id);
         const prodIndex = cart.findIndex(e => e.id == element.id);
-        if (cart[prodIndex].quant == 0) {
-            artId.innerHTML = ' ';
-        } 
+        if (cart[prodIndex].quant == 0) artId.innerHTML = ' ';
     });
 };
 
@@ -92,9 +90,7 @@ const removeItem = (remId) => {
     const prodIndex = cart.findIndex(e => e.id == remId);
     cart[prodIndex].quant--;
     cart[prodIndex].total = cart[prodIndex].quant * cart[prodIndex].price;
-    if (cart[prodIndex].quant == 0) {
-        localStorage.removeItem(cart[prodIndex]);
-    };
+    if (cart[prodIndex].quant == 0) localStorage.removeItem(cart[prodIndex]);
     saveStorage(cart);
     showProducts();
 };
