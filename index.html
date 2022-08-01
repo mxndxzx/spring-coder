@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/main.css">
-    <link rel="stylesheet" href="src/css/cart.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Spring Instrumentos | Inicio</title>
 </head>
 <body>
@@ -38,10 +38,10 @@
             <img class="indexHero__logo" src="src/img/logos/hero-logo.svg" alt="">
             <a class="indexHero__btn" href="#start">Conocé nuestra tienda!</a>
         </section>
-        <h1 class="indexTitle" id="start">Novedades en el Bunker!</h1>
-        <div class="cross"></div>
-        <h3 class="indexDesc">Descubrí las últimas novedades de Spring. Guitarras, bajos, amplificadores, pedales y múcho más.</h3>
-        <section class="indexCards"><!-- JS injected--></section>
+        <h1 data-aos="fade-up" class="indexTitle" id="start">Novedades en el Bunker!</h1>
+        <div data-aos="fade-up" class="cross"></div>
+        <h3 data-aos="fade-up" class="indexDesc">Descubrí las últimas novedades de Spring. Guitarras, bajos, amplificadores, pedales y múcho más.</h3>
+        <section class="indexCards" data-aos="fade-up"><!-- JS injected--></section>
         <img class="cart--toggle cart--toggle-unactive" src="src/img/icons/cart.svg" alt="Shopping cart"></img>
         <section class="cart cart--hidden"> <!-- JS injected-->
             <div class="cart__btns">
@@ -54,6 +54,7 @@
     <footer>
 
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="src/js/db.js"></script>
     <script src="src/js/main.js"></script>
 </body>

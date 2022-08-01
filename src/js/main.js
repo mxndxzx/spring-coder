@@ -1,3 +1,6 @@
+// Libraries
+AOS.init();
+
 // DOM Selectors
 const cards = document.querySelector('.indexCards');
 const cartToggler = document.querySelector('.cart--toggle');
