@@ -52,3 +52,9 @@
     color: map-get(variables.$palette, "card-price");
     font-weight: 400;
 }
+
+.usd--banner {
+    font-family: map-get(variables.$font, "text");
+    font-size: 1rem;
+    font-weight: 400;
+}

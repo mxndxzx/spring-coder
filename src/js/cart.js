@@ -2,15 +2,6 @@
 const cartToggler = document.querySelector('.cart--toggle');
 const cart = document.querySelector('.cart');
 
-// Functions
-// Price masking
-// const priceMask = (e) => {
-//     const mask = new Intl.NumberFormat('us-US', {
-//         styyle: 'currency', currency: 'USD'
-//     });
-//     return mask.format(e);
-// };
-
 // Get saved storage
 const getStorage = () => JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -36,7 +27,7 @@ const showProducts = () => {
     cart.innerHTML = ' ';
     storedCart.forEach(e => {
         cart.innerHTML += `
-            <div id="artId-${e.id}">
+            <div id="artId-${e.id}" class="cart__div">
                 <div class="cart__article">
                     <img class="cart__article--img" src="${e.img}" alt="${e.title}">
                     <div class="cart__article--div"></div>
@@ -78,8 +69,8 @@ const quantSus = (itemId) => {
 // Is the item in the cart?
 const isInCart = (itemId) => {
     let cart = getStorage();
-    return cart.some(e => e.id == itemId)
-}
+    return cart.some(e => e.id == itemId);
+};
 
 // Show cart container
 const showCart = () => {cart.classList.toggle('cart--show')};

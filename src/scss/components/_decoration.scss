@@ -41,3 +41,18 @@
 .cart--toggle-active {
     right: 20%;
 }
+
+.usd--banner {
+    position: fixed;
+    top: 50%;
+    height: 60px;
+    width: 120px;
+    padding: .4rem;
+    margin: 1rem;
+    border-radius: 20px;
+    background-color: map-get(variables.$palette, "acc-1");
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}

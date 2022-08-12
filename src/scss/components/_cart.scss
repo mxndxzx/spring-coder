@@ -1,17 +1,18 @@
 @use '../abstracts/variables';
 
 .cart {
-    position: fixed;
-    right: 0;
+    position: sticky;
     bottom: 0;
-    width: 16%;
-    height: 100%;
+    width: 100%;
+    height: 16%;
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: flex-start;
+    align-self: center;
     background-color: map-get(variables.$palette, "main-bg");
-    padding: 0 1rem;
+    padding: 1rem;
+    // overflow: scroll;
 }
 
 .cart--hidden {
@@ -37,7 +38,7 @@
 
 .cart__article--div {
     border: 1px solid map-get(variables.$palette, "text-2");
-    height: 90%;
+    height: 100px;
 }
 
 .article__name {
